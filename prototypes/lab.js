@@ -43,15 +43,6 @@ elephant.addAbility("trumpet", function () {
 });
 util.display("Create elephant", elephant);
 
-
-//
-// human.legs = ["left", "right"];
-// delete human.arms;
-// human.tentacles = ["up", "down", "left", "right"];
-//
-// display("Remove arms. Add tentacles", human);
-
-
 procedures.combine(lion, eagle);
 
 lion.attempt("fly");
@@ -72,3 +63,8 @@ util.canIt(lion,"fly");
 util.canIt(lion,"twerk");
 util.canIt(lion,"trumpet");
 util.canIt(lion,"swim");
+
+human.removeBodyPart("arms");
+human.addBodyPart("tentacles", 8);
+
+util.display("Add tentacles to human", human);

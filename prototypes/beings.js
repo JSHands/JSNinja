@@ -8,6 +8,19 @@ Being.prototype.addBodyPart = function (bodyPartName, count) {
 	this[bodyPartName] = count;
 };
 
+Being.prototype.removeBodyPart = function (bodyPartName) {
+	
+	console.log(`You are requesting to remove ${bodyPartName} from ${this.name}`);
+	
+	if (this[bodyPartName]) {
+		delete this[bodyPartName];
+		console.log(`${bodyPartName} removed!`);
+	} else {
+		console.log(`${this.name} doesn't have ${bodyPartName}`);
+	}
+	
+};
+
 Being.prototype.addAbility = function (abilityName, abilityFunction) {
 	this[abilityName] = abilityFunction;
 };
