@@ -13,8 +13,14 @@ Being.prototype.removeBodyPart = function (bodyPartName) {
 	console.log(`You are requesting to remove ${bodyPartName} from ${this.name}`);
 	
 	if (this[bodyPartName]) {
-		delete this[bodyPartName];
-		console.log(`${bodyPartName} removed!`);
+		
+		try {
+			delete this[bodyPartName];
+			console.log(`${bodyPartName} removed!`);
+		} catch (error) {
+			console.log(`Unable to remove ${bodyPartName} from ${this.name}`);
+		}
+		
 	} else {
 		console.log(`${this.name} doesn't have ${bodyPartName}`);
 	}

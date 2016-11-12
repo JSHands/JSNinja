@@ -68,3 +68,16 @@ human.removeBodyPart("arms");
 human.addBodyPart("tentacles", 8);
 
 util.display("Add tentacles to human", human);
+
+Object.defineProperty(human, "heart", {
+	configurable: false,
+	enumerable: true,
+	value: 1,
+	writable: false
+});
+
+util.display(`Add strong heart to human`, human);
+
+console.log(`Attempting to steal a human's heart`);
+
+human.removeBodyPart("heart");
